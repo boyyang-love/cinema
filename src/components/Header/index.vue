@@ -1,14 +1,20 @@
 <template>
   <div id="header">
       <div class="header">
-          <h4>boyyang</h4>
+          <h4>{{title}}</h4>
       </div>
   </div>
 </template>
 
 <script>
 export default {
-    name:"Header"
+    name:"Header",
+    props:{
+        title:{
+            type:String,
+            default:"boyyang"
+        }
+    }
 }
 </script>
 

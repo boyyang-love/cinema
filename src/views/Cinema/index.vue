@@ -1,6 +1,6 @@
 <template>
   <div id="cinema">
-      <Header/>
+      <Header title="电影院"/>
       
       <Footer/>
   </div>

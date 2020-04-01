@@ -1,6 +1,6 @@
 <template>
   <div id="mine">
-     <Header/>
+     <Header title="我的电影"/>
       
       <Footer/>
   </div>
