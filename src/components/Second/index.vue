@@ -37,10 +37,15 @@ export default {
         margin-top: 50px;
     }
     .second{
+        position: fixed;
+        top: 50px;
+        left: 0px;
         width: 100%;
         height: 45px;
+        background-color: #a1afc9;
         border-bottom: 2px solid #d6ecf0;
         display: flex;
+        z-index: 9999;
     }
    
     .city{
