@@ -2,7 +2,7 @@
   <div id="second">
       <div class="second">
           <router-link tag="div" to="/movie/city" class="city">
-              <h3>成都</h3><span><i class="iconfont icon-down"></i></span>
+              <h3>{{$store.state.city.nm}}</h3><span><i class="iconfont icon-down"></i></span>
           </router-link>
           <router-link tag="div" to="/movie/playing" class="isPlaying">
               <h3>正在热映</h3>
