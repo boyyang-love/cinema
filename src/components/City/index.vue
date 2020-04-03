@@ -28,8 +28,12 @@
 
 <script>
 import BScroll from "better-scroll";
+
 export default {
     name:"City",
+    components:{
+     
+    },
     data(){
       return{
         CityList:'',
