@@ -5,7 +5,7 @@
         <ul>
           <li v-for="(item,i) in movies" :key="i">
             <div class="photo">
-              <img :src="item.img | setWH(90.118)" alt="图片" />
+              <img :src="item.img | setWH(90.118)" alt="图片" @touchstart="hand(item.id)"/>
             </div>
             <div class="brief">
               <h3>{{item.nm}}</h3>
@@ -33,7 +33,11 @@ export default {
       precityid: -1
     };
   },
-  methods: {},
+  methods: {
+    hand(movieid){
+      this.$router.push('/movie/detail/' + movieid)
+    }
+  },
   activated() {
     var cityid = this.$store.state.city.id;
     if (cityid === this.precityid) {

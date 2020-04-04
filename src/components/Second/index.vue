@@ -45,7 +45,7 @@ export default {
         background-color: #a1afc9;
         border-bottom: 2px solid #d6ecf0;
         display: flex;
-        z-index: 9999;
+        z-index: 20;
     }
    
     .city{

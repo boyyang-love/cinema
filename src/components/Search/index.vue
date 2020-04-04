@@ -8,7 +8,7 @@
         </div>
         <div class="result">
           <ul>
-            <li v-for="(item,i) in movies" :key="i">
+            <li v-for="(item,i) in movies" :key="i" @touchstart=hand(item)>
               <div class="photo">
                 <img :src="item.img | setWH(90.118)" alt="图片" />
               </div>
@@ -44,6 +44,9 @@ export default {
       if (typeof this.source === "function") {
         this.source("终止请求");
       }
+    },
+    hand(movieid){
+      console.log(movieid);
     }
   },
   watch: {

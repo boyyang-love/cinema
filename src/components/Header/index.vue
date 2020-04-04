@@ -1,7 +1,7 @@
 <template>
   <div id="header">
       <div class="header">
-          <h4>{{title}}</h4>
+       <slot/> <h4>{{title}}</h4>
       </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
         position: fixed;
         top: 0px;
         left: 0px;
-        z-index: 99999;
+        z-index: 20;
     }
     .header{
         width: 100%;

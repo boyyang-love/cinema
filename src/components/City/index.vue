@@ -5,14 +5,14 @@
          <span>{{mes}}</span>
         <div class="hotcity">
           <ul>
-            <li v-for="(item,i) in CityHot" :key="i" @tap = hand(item.nm,item.id)>{{item.nm}}</li>
+            <li v-for="(item,i) in CityHot" :key="i" @tap = "hand(item.nm,item.id)">{{item.nm}}</li>
           </ul>
         </div>
         <div class="allcities" ref="sort">
             <div class="sort"  v-for="(item,i) in CityList" :key="i">
                 <h2>{{item.index}}</h2>
                 <ul >
-                  <li v-for="(city,i) in item.list" :key="i" @tap=hand(city.nm,city.id)>{{city.nm}}</li>
+                  <li v-for="(city,i) in item.list" :key="i" @tap = "hand(city.nm,city.id)">{{city.nm}}</li>
                 </ul>
             </div>
         </div>
@@ -160,6 +160,7 @@ export default {
       },
 
       hand(nm,id){
+        // console.log(nm);
         this.$store.commit('city/CITY_INFO',{nm,id});
         window.localStorage.setItem('nowNm',nm);
         window.localStorage.setItem('nowId',id);

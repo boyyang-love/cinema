@@ -2,12 +2,13 @@
     <div id="movie">
       <Header title="boyyang"/>
       <Second/>
-  
       <keep-alive>
         <router-view/>
       </keep-alive> 
       <Footer/>
+      <router-view name='detail'/>
     </div>
+    
 </template>
 
 <script>
@@ -21,7 +22,6 @@ export default {
       Header,
       Footer,
       Second,
-   
     }
 }
 </script>

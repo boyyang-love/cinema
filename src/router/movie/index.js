@@ -14,6 +14,15 @@ export default{
         {path:'search',
         component:() =>import ("@/components/Search")
         },
+        {
+            path:'detail/:movieid',
+            components:{
+                detail: ()=>import ("@/components/Detail")
+            },
+            props:{
+                detail:true
+            }
+        },
         {path:"/movie",
         redirect:"/movie/city"
         }
