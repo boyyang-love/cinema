@@ -1,6 +1,7 @@
 <template>
   <div id="isPlaying">
-    <div class="wrap" ref="wrap">
+    <loading v-if="isloading"/>
+    <div class="wrap" ref="wrap" v-else>
       <div class="content">
         <ul>
           <li v-for="(item,i) in movies" :key="i">
@@ -30,7 +31,8 @@ export default {
   data() {
     return {
       movies: "",
-      precityid: -1
+      precityid: -1,
+      isloading:'true'
     };
   },
   methods: {
@@ -49,6 +51,7 @@ export default {
       .then(res => {
         // console.log(res.data.data.movieList)
         // console.log(cityid);
+        this.isloading = false;
         this.precityid = cityid;
         this.movies = res.data.data.movieList;
 

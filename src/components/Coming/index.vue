@@ -1,6 +1,7 @@
 <template>
   <div id="coming">
-    <div class="wrap" ref="wrap">
+    <loading v-if="isloading"/>
+    <div class="wrap" ref="wrap" v-else>
       <div class="content">
         <ul>
           <li v-for="(item,i) in movies" :key="i">
@@ -30,7 +31,8 @@ export default {
   data() {
     return {
       movies: "",
-      precityid: -1
+      precityid: -1,
+      isloading:true
     };
   },
   methods: {
@@ -50,7 +52,7 @@ export default {
         this.precityid = cityid;
 
         this.movies = res.data.data.comingList;
-
+        this.isloading = false;
         this.$nextTick(() => {
           new BScroll(this.$refs.wrap, {});
         });
