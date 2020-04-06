@@ -113,7 +113,7 @@ export default {
 .iconfont {
   flex: 2;
   height: 35px;
-  font-size: 22px;
+  font-size: 18px;
   color: red;
 }
 

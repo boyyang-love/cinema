@@ -5,7 +5,7 @@
       <div class="content">
         <ul>
           <li v-for="(item,i) in movies" :key="i">
-            <div class="photo" @touchstart = "hand(item.id)">
+            <div class="photo" @tap = "hand(item.id)">
               <img :src="item.img | setWH('90.118')" alt="图片"  />
             </div>
             <div class="brief">
@@ -54,7 +54,9 @@ export default {
         this.movies = res.data.data.comingList;
         this.isloading = false;
         this.$nextTick(() => {
-          new BScroll(this.$refs.wrap, {});
+          new BScroll(this.$refs.wrap, {
+            tap:true
+          });
         });
       })
       .catch(err => {
