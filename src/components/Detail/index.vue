@@ -11,7 +11,7 @@
       </div>
       <div class="movieMessage">{{mes.dra}}</div>
     </div>
-    <div class="video">
+    <div class="video" v-if="mes.vd"> 
       <video :src="mes.vd" controls :poster="mes.videoImg"></video>
     </div>
     <div class="imgShow">
@@ -64,6 +64,7 @@ export default {
         this.change(photos);
         // console.log(imgs);
         // this.photos =imgs;
+       
       })
       .catch(err => {
         console.log(err);
