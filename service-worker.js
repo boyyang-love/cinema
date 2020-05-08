@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.7dfd8ac1c6dc68fc1c5150299ee2e5e1.js"
+  "precache-manifest.27f5be7d701043ae9dd79586e01f3a5f.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "cinema-app"});
